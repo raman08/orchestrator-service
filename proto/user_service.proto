@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package user_service;
+option go_package="/user_service";
+
+service Orchestrator {
+	rpc GetUserByName (UserRequest) returns (User);
+}
+
+message UserRequest {
+	string name=1;
+}
+
+message User {
+	string name=1;
+	string class=2;
+	int64 roll=3;
+}
