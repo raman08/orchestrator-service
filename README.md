@@ -1,7 +1,7 @@
 # orchestrator-service
 
 -   This is an orchestrator service which would read any request it receives and forwards it to other orchestrator services and data services.
--   The final output of the exercise must look like:
+-   The flow of the program is:
     ```
     client ---RPC--> orchestrator_1(:9000) ---RPC--> orchestrator_2(:9001) ---RPC--> mock_data_service(:10000)
     ```
@@ -13,7 +13,7 @@
 -   Clone the Repository
 
     ```
-    Clone the https://github.com/raman08/orchestrator-service.git
+    git clone https://github.com/raman08/orchestrator-service.git
     ```
 
 -   Inside the Repository
