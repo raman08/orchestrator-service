@@ -5,6 +5,7 @@ option go_package="/user_service";
 
 service Orchestrator {
 	rpc GetUserByName (UserRequest) returns (User);
+	rpc GetMockUserData (UserRequest) returns (User);
 }
 
 message UserRequest {

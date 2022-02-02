@@ -10,7 +10,8 @@ import (
 )
 
 const (
-	serverAddress = "0.0.0.0:9000"
+	serverAddress = "0.0.0.0:10000"
+	// serverAddress = "0.0.0.0:9000"
 )
 
 func main() {
@@ -27,10 +28,12 @@ func main() {
 
 	defer cancel()
 
-	var new_users = []string {"Raman", "Preet"}
+	var new_users = []string {"Raman Preet Singh", "Preet"}
 
 	for _, name := range new_users {
-		response, err := client.GetUserByName(ctx, &pb.UserRequest{Name: name})
+
+		// response, err := client.GetUserByName(ctx, &pb.UserRequest{Name: name})
+		response, err := client.GetMockUserData(ctx, &pb.UserRequest{Name: name})
 
 		if err != nil {
 			log.Fatalf("Failed to get User! \n Error: %v", err)
